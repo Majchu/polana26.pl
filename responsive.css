@@ -1,0 +1,60 @@
+/*--------------------- Responsive (Start) ---------------------*/
+
+@media (max-width: 991px) {
+    html {
+        font-size: 55%;
+    }
+}
+
+@media (max-width: 768px) {
+    header #menu-btn {
+        display: block;
+    }
+    section,
+    header {
+        padding: 2rem;
+    }
+    .header .navbar {
+        background: #F7F5F2;
+        border: 0.1rem solid #BC8CF2;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+        height: calc(100vh - 6rem);
+        overflow-y: auto;
+        padding: 0rem 2rem;
+        position: absolute;
+        right: 0;
+        top: 100%;
+        transform: translateX(100%);
+        transition: 0.2s linear;
+        width: 30rem;
+    }
+    .header .navbar.active {
+        transform: translateX(0);
+    }
+    .header .navbar a {
+        color: #000;
+        display: block;
+        margin: 1rem 0;
+        padding: 1.5rem 0;
+    }
+    .navbar::-webkit-scrollbar {
+        width: 0.8rem;
+    }
+    .navbar::-webkit-scrollbar-thumb {
+        background-color: #BC8CF2;
+        border-radius: 1rem;
+    }
+    .navbar::-webkit-scrollbar-track {
+        background: transparent;
+    }
+}
+
+@media (max-width: 450px) {
+    html {
+        font-size: 50%;
+    }
+    section,
+    header {
+        padding: 1rem;
+    }
+}
