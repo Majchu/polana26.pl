@@ -21,6 +21,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 :root {
     --black: #000;
+    --darkgrey: #3b3b3b;
     --grey: #dfdfdf;
     --purple: #bc8cf2;
     --white: #fff;
@@ -538,7 +539,7 @@ header #menu-btn:hover {
 
 .contact-info .info-item h3 {
     color: var(--white);
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .contact-info .info-item .detail {
@@ -661,12 +662,13 @@ footer .social .fab:hover {
 }
 
 footer .content p {
-    color: var(--white);
+    color: var(--darkgrey);
     font-size: 2rem;
 }
 
 footer .content p a {
     color: var(--black);
+    font-weight: bold;
 }
 
 
