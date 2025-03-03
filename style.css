@@ -1,17 +1,18 @@
 /* Table of Contents
 =================
-  0. Global
-  1. Heading
-  2. Button
-  3. Header
-  4. Home
-  5. About
-  6. Qualification
-  7. Services
-  8. Portfolio
-  9. Contact
-  10. Footer
-
+    0. Global
+    1. Heading
+    2. Button
+    3. Header
+    4. Home
+    5. About
+    6. Qualification
+    7. Services
+    8. Portfolio
+    9. Contact
+    10. Footer
+    11. Scroll Top
+=================
 */
 
 
@@ -82,28 +83,28 @@ section {
 }
 
 .heading h2 {
-    text-align: center;
-    padding-bottom: 2rem;
     color: var(--purple);
     font-size: 4rem;
+    padding-bottom: 2rem;
+    text-align: center;
 }
 
 .heading h2 span {
+    color: var(--white);
     position: relative;
     z-index: 0;
-    color: var(--white);
 }
 
 .heading h2 span::before {
-    content: '';
-    position: absolute;
-    bottom: -0.5rem;
-    left: 0;
-    z-index: -1;
     background: var(--purple);
+    bottom: -0.5rem;
+    content: '';
     height: 0.2rem;
-    width: 80%;
+    left: 0;
     margin-left: 10%;
+    position: absolute;
+    width: 80%;
+    z-index: -1;
 }
 
 
@@ -171,19 +172,19 @@ header .navbar a:hover {
 }
 
 header #menu-btn {
-    font-size: 3rem;
     color: var(--white);
     cursor: pointer;
-    -webkit-transition: all 0.5s linear;
+    display: none;
+    font-size: 3rem;
+    transition: all 0.5s linear;
     -moz-transition: all 0.5s linear;
     -o-transition: all 0.5s linear;
-    transition: all 0.5s linear;
-    display: none;
+    -webkit-transition: all 0.5s linear;
 }
 
 header .fa-times {
-    -webkit-transform: rotate(180deg);
     transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
 }
 
 header #menu-btn:hover {
@@ -392,45 +393,142 @@ header #menu-btn:hover {
 
 /*--------------------- 8 Portfolio ---------------------*/
 
+.controls {
+    align-items: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 2rem;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+}
+
+.controls .button {
+    cursor: pointer;
+    margin: 0.5rem;
+}
+
+.controls .button.active {
+    background-color: var(--purple);
+    color: var(--white);
+    cursor: pointer;
+}
+
+.portfolio .box-container {
+    display: -ms-grid;
+    display: grid;
+    gap: 0.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
+    padding: 2rem 0;
+}
+
+.portfolio-item {
+    border-radius: 0.5rem;
+    height: 25rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.portfolio-item img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+.portfolio-item .content {
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
+    content: '';
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-direction: column;
+    height: 80%;
+    justify-content: center;
+    left: 10%;
+    position: absolute;
+    top: 10%;
+    transform: scale(0);
+    width: 80%;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-transform: scale(0);
+}
+
+.portfolio-item .content h4 {
+    color: var(--purple);
+    font-size: 2rem;
+    font-weight: bold;
+    opacity: 0;
+    padding-bottom: 1rem;
+    transform: translateY(-10rem);
+    transform-origin: top;
+    transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    -webkit-transform: translateY(-10rem);
+    -webkit-transition: all 0.4s linear;
+}
+
+.portfolio-item .content p {
+    color: var(--white);
+    font-size: 1.8rem;
+    font-weight: 400;
+    opacity: 0;
+    transform: translateY(-10rem);
+    transform-origin: top;
+    transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
+    -webkit-transform: translateY(-10rem);
+    -webkit-transition: all 0.4s linear;
+}
+
 
 /*--------------------- 9 Contact ---------------------*/
 
 .contact .alert {
-    font-size: 2rem;
-    color: var(--purple);
     border-radius: 0.5rem;
+    color: var(--purple);
+    font-size: 2rem;
     padding-left: 1rem;
 }
 
 .contact .box-container {
+    align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     gap: 2rem;
+    justify-content: center;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
+    -ms-flex-wrap: wrap;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
 }
 
 .contact-info {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 42rem;
     flex: 1 1 42rem;
+    -ms-flex: 1 1 42rem;
+    -webkit-box-flex: 1;
 }
 
 .contact-info h3 {
-    font-size: 3rem;
     color: var(--white);
+    font-size: 3rem;
 }
 
 .contact-info>p {
-    font-size: 1.6rem;
     color: var(--grey);
+    font-size: 1.6rem;
     padding: 0.5rem 0;
 }
 
@@ -439,42 +537,45 @@ header #menu-btn:hover {
 }
 
 .contact-info .info-item h4 {
-    font-size: 1.8rem;
     color: var(--white);
+    font-size: 1.8rem;
 }
 
 .contact-info .info-item .detail {
+    align-items: center;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
     -ms-flex-align: center;
-    align-items: center;
 }
 
 .contact-info .info-item .detail .fas,
 .contact-info .info-item .detail .fab {
+    align-items: center;
+    background-color: var(--black);
     border-radius: 50%;
     color: var(--purple);
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    ;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     font-size: 1.5rem;
+    height: 4rem;
+    justify-content: center;
+    margin: 0 0.5rem;
+    width: 4rem;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
 }
 
 .contact-info .info-item .detail p {
-    font-size: 1.6rem;
     color: var(--grey);
+    font-size: 1.6rem;
     line-height: 1.6;
-    text-transform: none;
     padding-left: 1rem;
+    text-transform: none;
 }
 
 .contact-info .info-item .detail p a {
@@ -483,20 +584,20 @@ header #menu-btn:hover {
 }
 
 .contact-form {
-    -webkit-box-flex: 1;
-    -ms-flex: 1 1 42rem;
     flex: 1 1 42rem;
+    -ms-flex: 1 1 42rem;
+    -webkit-box-flex: 1;
 }
 
 .contact-form .box {
-    width: 100%;
-    text-transform: none;
+    background-color: #222;
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
     color: var(--grey);
     font-size: 1.6rem;
-    border: 0.1rem solid rgba(0, 0, 0, 0.1);
-    padding: 1.5rem;
     margin: 0.5rem 0;
-    background-color: #222;
+    padding: 1.5rem;
+    text-transform: none;
+    width: 100%;
 }
 
 .contact-form .box:focus {
@@ -529,41 +630,74 @@ footer .social {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     padding: 2rem 0;
+    -ms-flex-pack: center;
+    -webkit-box-pack: center;
 }
 
 footer .social .fab {
+    align-items: center;
     background-color: var(--black);
     border-radius: 50%;
-    height: 4rem;
-    width: 4rem;
     color: var(--white);
-    font-size: 2rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
+    font-size: 2rem;
+    height: 4rem;
     justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
     margin: 0 0.5rem;
+    width: 4rem;
+    -webkit-box-align: center;
+    -webkit-box-pack: center;
+    -ms-flex-align: center;
+    -ms-flex-pack: center;
 }
 
 footer .social .fab:hover {
-    color: var(--black);
     background-color: var(--white);
+    color: var(--black);
 }
 
 footer .content p {
-    font-size: 2rem;
     color: var(--white);
+    font-size: 2rem;
 }
 
 footer .content p a {
+    color: var(--black);
+}
+
+
+/*--------------------- 11 Scroll Top ---------------------*/
+
+.scroll-top {
+    align-items: center;
+    background: var(--black);
+    border: 0.2rem solid var(--white);
+    border-radius: 50%;
+    bottom: 1rem;
+    color: var(--white);
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: 3rem;
+    font-weight: lighter;
+    height: 5rem;
+    justify-content: center;
+    position: fixed;
+    right: 1rem;
+    transition: all 0.2s;
+    width: 5rem;
+    z-index: 999;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+}
+
+.scroll-top:hover {
+    background: var(--white);
     color: var(--black);
 }
