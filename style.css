@@ -1,139 +1,156 @@
+/*--------------------- 0 Global ---------------------*/
+
 :root {
     --black: #000;
     --darkgrey: #3b3b3b;
     --grey: #dfdfdf;
     --purple: #bc8cf2;
-    --white: #fff
+    --white: #fff;
 }
 
 * {
     border: none;
     box-sizing: border-box;
-    font-family: Roboto, sans-serif;
+    font-family: "Roboto", sans-serif;
     margin: 0;
-    outline: 0;
+    outline: none;
     padding: 0;
     text-decoration: none;
     text-transform: capitalize;
-    transition: all .2s linear;
-    -moz-transition: all .2s linear;
-    -o-transition: all .2s linear;
+    transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
     -webkit-box-sizing: border-box;
-    -webkit-transition: all .2s linear
+    -webkit-transition: all 0.2s linear;
 }
 
-::selection {
+*::selection {
     background-color: var(--purple);
-    color: var(--white)
+    color: var(--white);
 }
 
 body {
-    background-color: var(--black)
+    background-color: var(--black);
 }
 
 html {
     font-size: 62.5%;
     overflow-x: hidden;
     scroll-behavior: smooth;
-    scroll-padding-top: 6rem
+    scroll-padding-top: 6rem;
 }
 
 section {
-    padding: 2rem 5%
+    padding: 2rem 5%;
 }
 
 ::-webkit-scrollbar {
-    width: .8rem
+    width: 0.8rem;
 }
 
 ::-webkit-scrollbar-thumb {
     background-color: var(--purple);
-    border-radius: 1rem
+    border-radius: 1rem;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--black)
+    background-color: var(--black);
 }
 
+
+/*--------------------- 1 Heading ---------------------*/
+
 .heading {
-    margin-bottom: 2rem
+    margin-bottom: 2rem;
 }
 
 .heading h2 {
     color: var(--purple);
     font-size: 4rem;
     padding-bottom: 2rem;
-    text-align: center
+    text-align: center;
 }
 
 .heading h2 span {
     color: var(--white);
     position: relative;
-    z-index: 0
+    z-index: 0;
 }
 
 .heading h2 span::before {
     background: var(--purple);
-    bottom: -.5rem;
+    bottom: -0.5rem;
     content: '';
-    height: .2rem;
+    height: 0.2rem;
     left: 0;
     margin-left: 10%;
     position: absolute;
     width: 80%;
-    z-index: -1
+    z-index: -1;
 }
+
+
+/*--------------------- 2 Button ---------------------*/
 
 .btn {
     background-color: transparent;
-    border: .2rem solid var(--purple);
+    border: 0.2rem solid var(--purple);
     color: var(--purple);
     display: inline-block;
     font-size: 1.8rem;
-    padding: 1rem 2rem
+    padding: 1rem 2rem;
 }
 
 .btn i {
-    padding-left: 1rem
+    padding-left: 1rem;
 }
 
 .btn:hover {
     background-color: var(--purple);
     color: var(--white);
-    cursor: pointer
+    cursor: pointer;
 }
+
+
+/*--------------------- 3 Header ---------------------*/
 
 header {
     align-items: center;
-    background: 0 0;
+    background: transparent;
     display: flex;
     justify-content: space-between;
     left: 0;
     padding: 2rem 5%;
     position: fixed;
     top: 0;
-    transition: all .5s linear;
+    transition: all 0.5s linear;
     width: 100%;
     z-index: 999;
-    -moz-transition: all .5s linear;
-    -o-transition: all .5s linear;
-    -webkit-transition: all .5s linear
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+}
+
+header.sticky {
+    background: rgba(0, 0, 0, 0.8);
+    border-bottom: 0.1rem solid var(--grey);
 }
 
 header .logo h2 {
     color: var(--purple);
     font-size: 2.5rem;
-    text-transform: uppercase
+    text-transform: uppercase;
 }
 
 header .navbar a {
     color: var(--white);
     font-size: 1.8rem;
-    margin-left: 1rem
+    margin-left: 1rem;
 }
 
+header .navbar a.active,
 header .navbar a:hover {
-    color: var(--purple)
+    color: var(--purple);
 }
 
 header #menu-btn {
@@ -141,20 +158,28 @@ header #menu-btn {
     cursor: pointer;
     display: none;
     font-size: 3rem;
-    transition: all .5s linear;
-    -moz-transition: all .5s linear;
-    -o-transition: all .5s linear;
-    -webkit-transition: all .5s linear
+    transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    -webkit-transition: all 0.5s linear;
+}
+
+header .fa-times {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
 }
 
 header #menu-btn:hover {
-    color: var(--purple)
+    color: var(--purple);
 }
+
+
+/*--------------------- 4 Home ---------------------*/
 
 .home {
     background-color: var(--black);
     min-height: 100vh;
-    padding: 0 5%
+    padding: 0rem 5%;
 }
 
 .home .box-container {
@@ -163,7 +188,7 @@ header #menu-btn:hover {
     flex-wrap: wrap;
     gap: 4rem;
     justify-content: center;
-    min-height: 100vh
+    min-height: 100vh;
 }
 
 .home .content {
@@ -171,24 +196,24 @@ header #menu-btn:hover {
     display: flex;
     flex: 1 1 40rem;
     justify-content: center;
-    margin-top: 7rem
+    margin-top: 7rem;
 }
 
 .home .content h1 {
     color: var(--white);
     font-size: 4rem;
     padding: 1rem 0;
-    text-transform: none
+    text-transform: none;
 }
 
 .home .content h1 span {
-    color: var(--purple)
+    color: var(--purple);
 }
 
 .home .content h2 {
     color: var(--purple);
     font-size: 2.5rem;
-    font-weight: 400
+    font-weight: 400;
 }
 
 .home .content p {
@@ -196,20 +221,26 @@ header #menu-btn:hover {
     font-size: 1.7rem;
     font-weight: 400;
     line-height: 1.5;
-    padding-bottom: 2rem
+    padding-bottom: 2rem;
 }
 
 .home .image {
     flex: 1 1 40rem;
-    text-align: center
+    text-align: center;
 }
 
 .home .image img {
-    border-radius: 50% 50% 50% 50%/30% 30% 70% 70%;
+    border-radius: 50% 50% 50% 50% / 30% 30% 70% 70%;
     height: 40rem;
     object-fit: cover;
-    width: 40rem
+    width: 40rem;
 }
+
+
+/*--------------------- 5 About ---------------------*/
+
+
+/*--------------------- 6 Qualification ---------------------*/
 
 .qualification .box-container {
     align-items: center;
@@ -223,23 +254,24 @@ header #menu-btn:hover {
     -ms-flex-pack: center;
     -ms-flex-wrap: wrap;
     -webkit-box-align: center;
-    -webkit-box-pack: center
+    -webkit-box-pack: center;
 }
 
-.education, .experience {
+.education,
+.experience {
     flex: 1 1 40rem;
     -ms-flex: 1 1 40rem;
-    -webkit-box-flex: 1
+    -webkit-box-flex: 1;
 }
 
 .experience-item {
-    border-left: .2rem solid var(--purple);
+    border-left: 0.2rem solid var(--purple);
     flex: 1 1 40rem;
     margin-left: 2rem;
     padding: 0 3rem 2rem 3rem;
     position: relative;
     -ms-flex: 1 1 40rem;
-    -webkit-box-flex: 1
+    -webkit-box-flex: 1;
 }
 
 .experience-item i {
@@ -253,25 +285,25 @@ header #menu-btn:hover {
     position: absolute;
     text-align: center;
     top: 0;
-    width: 5rem
+    width: 5rem;
 }
 
 .experience-item .content {
     border-left: 2rem;
-    border-radius: .5rem;
-    padding: 1rem 2rem
+    border-radius: 0.5rem;
+    padding: 1rem 2rem;
 }
 
 .experience-item h3 {
     color: var(--white);
     font-size: 2.5rem;
-    padding: 2rem 0
+    padding: 2rem 0;
 }
 
 .experience-item p {
     color: var(--grey);
     font-size: 1.6rem;
-    line-height: 2.5rem
+    line-height: 2.5rem;
 }
 
 .experience-item span {
@@ -279,8 +311,11 @@ header #menu-btn:hover {
     border-radius: 50rem;
     color: var(--white);
     font-size: 1.8rem;
-    padding: .5rem 1.5rem
+    padding: 0.5rem 1.5rem;
 }
+
+
+/*--------------------- 7 Services ---------------------*/
 
 .service .box-container {
     align-items: center;
@@ -294,48 +329,51 @@ header #menu-btn:hover {
     -ms-flex-pack: center;
     -ms-flex-wrap: wrap;
     -webkit-box-align: center;
-    -webkit-box-pack: center
+    -webkit-box-pack: center;
 }
 
 .service-item {
     background-color: var(--black);
-    border: .1rem solid rgba(255, 255, 255, .3);
-    border-radius: .5rem;
+    border: 0.1rem solid rgba(255, 255, 255, 0.3);
+    border-radius: 0.5rem;
     flex: 1 1 33rem;
     padding: 4rem 3rem;
     text-align: center;
-    transition: all .5s linear;
-    -moz-transition: all .5s linear;
-    -o-transition: all .5s linear;
+    transition: all 0.5s linear;
+    -moz-transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
     -webkit-box-flex: 1;
-    -webkit-transition: all .5s linear;
-    -ms-flex: 1 1 33rem
+    -webkit-transition: all 0.5s linear;
+    -ms-flex: 1 1 33rem;
 }
 
 .service-item:hover {
-    background-color: var(--purple)
+    background-color: var(--purple);
 }
 
 .service-item h3 {
     color: var(--white);
     font-size: 2rem;
-    padding: 1.5rem 0
+    padding: 1.5rem 0;
 }
 
 .service-item i {
     color: var(--white);
-    font-size: 4rem
+    font-size: 4rem;
 }
 
 .service-item p {
     color: var(--grey);
     font-size: 1.6rem;
-    line-height: 1.6
+    line-height: 1.6;
 }
 
 .service-item:hover p {
-    color: var(--white)
+    color: var(--white);
 }
+
+
+/*--------------------- 8 Portfolio ---------------------*/
 
 .controls {
     align-items: center;
@@ -349,39 +387,45 @@ header #menu-btn:hover {
     -ms-flex-align: center;
     -ms-flex-pack: center;
     -webkit-box-align: center;
-    -webkit-box-pack: center
+    -webkit-box-pack: center;
 }
 
 .controls .button {
     cursor: pointer;
-    margin: .5rem
+    margin: 0.5rem;
+}
+
+.controls .button.active {
+    background-color: var(--purple);
+    color: var(--white);
+    cursor: pointer;
 }
 
 .portfolio .box-container {
     display: -ms-grid;
     display: grid;
-    gap: .5rem;
+    gap: 0.5rem;
     grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
-    padding: 2rem 0
+    padding: 2rem 0;
 }
 
 .portfolio-item {
-    border-radius: .5rem;
+    border-radius: 0.5rem;
     height: 25rem;
     overflow: hidden;
-    position: relative
+    position: relative;
 }
 
 .portfolio-item img {
     height: 100%;
     object-fit: cover;
-    width: 100%
+    width: 100%;
 }
 
 .portfolio-item .content {
     align-items: center;
-    background-color: rgba(0, 0, 0, .8);
-    border-radius: .5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    border-radius: 0.5rem;
     content: '';
     display: -webkit-box;
     display: -ms-flexbox;
@@ -396,22 +440,22 @@ header #menu-btn:hover {
     width: 80%;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-    -webkit-transform: scale(0)
+    -webkit-transform: scale(0);
 }
 
 .portfolio-item .content h4 {
     color: var(--purple);
     font-size: 2rem;
-    font-weight: 700;
+    font-weight: bold;
     opacity: 0;
     padding-bottom: 1rem;
     transform: translateY(-10rem);
     transform-origin: top;
-    transition: all .4s linear;
-    -moz-transition: all .4s linear;
-    -o-transition: all .4s linear;
+    transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
     -webkit-transform: translateY(-10rem);
-    -webkit-transition: all .4s linear
+    -webkit-transition: all 0.4s linear;
 }
 
 .portfolio-item .content p {
@@ -421,11 +465,21 @@ header #menu-btn:hover {
     opacity: 0;
     transform: translateY(-10rem);
     transform-origin: top;
-    transition: all .4s linear;
-    -moz-transition: all .4s linear;
-    -o-transition: all .4s linear;
+    transition: all 0.4s linear;
+    -moz-transition: all 0.4s linear;
+    -o-transition: all 0.4s linear;
     -webkit-transform: translateY(-10rem);
-    -webkit-transition: all .4s linear
+    -webkit-transition: all 0.4s linear;
+}
+
+
+/*--------------------- 9 Contact ---------------------*/
+
+.contact .alert {
+    border-radius: 0.5rem;
+    color: var(--purple);
+    font-size: 2rem;
+    padding-left: 1rem;
 }
 
 .contact .box-container {
@@ -440,33 +494,33 @@ header #menu-btn:hover {
     -ms-flex-pack: center;
     -ms-flex-wrap: wrap;
     -webkit-box-align: center;
-    -webkit-box-pack: center
+    -webkit-box-pack: center;
 }
 
 .contact-info {
     flex: 1 1 42rem;
     -ms-flex: 1 1 42rem;
-    -webkit-box-flex: 1
+    -webkit-box-flex: 1;
 }
 
 .contact-info h3 {
     color: var(--white);
-    font-size: 3rem
+    font-size: 3rem;
 }
 
 .contact-info>p {
     color: var(--grey);
     font-size: 1.6rem;
-    padding: .5rem 0
+    padding: 0.5rem 0;
 }
 
 .contact-info .info-item {
-    padding: 1rem 0
+    padding: 1rem 0;
 }
 
 .contact-info .info-item h3 {
     color: var(--white);
-    font-size: 1.8rem
+    font-size: 1.8rem;
 }
 
 .contact-info .info-item .detail {
@@ -475,10 +529,11 @@ header #menu-btn:hover {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
-    -ms-flex-align: center
+    -ms-flex-align: center;
 }
 
-.contact-info .info-item .detail .fab, .contact-info .info-item .detail .fas {
+.contact-info .info-item .detail .fas,
+.contact-info .info-item .detail .fab {
     align-items: center;
     background-color: var(--black);
     border-radius: 50%;
@@ -489,12 +544,12 @@ header #menu-btn:hover {
     font-size: 1.5rem;
     height: 4rem;
     justify-content: center;
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
     width: 4rem;
     -webkit-box-align: center;
     -webkit-box-pack: center;
     -ms-flex-align: center;
-    -ms-flex-pack: center
+    -ms-flex-pack: center;
 }
 
 .contact-info .info-item .detail p {
@@ -502,47 +557,55 @@ header #menu-btn:hover {
     font-size: 1.6rem;
     line-height: 1.6;
     padding-left: 1rem;
-    text-transform: none
+    text-transform: none;
 }
 
 .contact-info .info-item .detail p a {
     color: var(--grey);
-    text-transform: none
+    text-transform: none;
 }
 
 .contact-form {
     flex: 1 1 42rem;
     -ms-flex: 1 1 42rem;
-    -webkit-box-flex: 1
+    -webkit-box-flex: 1;
 }
 
 .contact-form .box {
     background-color: #222;
-    border: .1rem solid rgba(0, 0, 0, .1);
+    border: 0.1rem solid rgba(0, 0, 0, 0.1);
     color: var(--grey);
     font-size: 1.6rem;
-    margin: .5rem 0;
+    margin: 0.5rem 0;
     padding: 1.5rem;
     text-transform: none;
-    width: 100%
+    width: 100%;
 }
 
 .contact-form .box:focus {
-    border-color: var(--white)
+    border-color: var(--white);
 }
 
 .contact-form .box::placeholder {
-    color: var(--grey)
+    color: var(--grey);
+}
+
+.contact-form textarea {
+    height: 15rem;
+    resize: none;
 }
 
 .contact-form .btn {
-    margin-top: 1rem
+    margin-top: 1rem;
 }
+
+
+/*--------------------- 10 Footer ---------------------*/
 
 footer {
     background-color: var(--purple);
     padding: 2rem 0;
-    text-align: center
+    text-align: center;
 }
 
 footer .social {
@@ -552,7 +615,7 @@ footer .social {
     justify-content: center;
     padding: 2rem 0;
     -ms-flex-pack: center;
-    -webkit-box-pack: center
+    -webkit-box-pack: center;
 }
 
 footer .social .fab {
@@ -566,33 +629,36 @@ footer .social .fab {
     font-size: 2rem;
     height: 4rem;
     justify-content: center;
-    margin: 0 .5rem;
+    margin: 0 0.5rem;
     width: 4rem;
     -webkit-box-align: center;
     -webkit-box-pack: center;
     -ms-flex-align: center;
-    -ms-flex-pack: center
+    -ms-flex-pack: center;
 }
 
 footer .social .fab:hover {
     background-color: var(--white);
-    color: var(--black)
+    color: var(--black);
 }
 
 footer .content p {
     color: var(--darkgrey);
-    font-size: 2rem
+    font-size: 2rem;
 }
 
 footer .content p a {
     color: var(--black);
-    font-weight: 700
+    font-weight: bold;
 }
+
+
+/*--------------------- 11 Scroll Top ---------------------*/
 
 .scroll-top {
     align-items: center;
     background: var(--black);
-    border: .2rem solid var(--white);
+    border: 0.2rem solid var(--white);
     border-radius: 50%;
     bottom: 1rem;
     color: var(--white);
@@ -606,15 +672,15 @@ footer .content p a {
     justify-content: center;
     position: fixed;
     right: 1rem;
-    transition: all .2s;
+    transition: all 0.2s;
     width: 5rem;
     z-index: 999;
-    -moz-transition: all .2s;
-    -o-transition: all .2s;
-    -webkit-transition: all .2s
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
 }
 
 .scroll-top:hover {
     background: var(--white);
-    color: var(--black)
+    color: var(--black);
 }
