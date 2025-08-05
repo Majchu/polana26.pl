@@ -17,11 +17,11 @@
     padding: 0;
     text-decoration: none;
     text-transform: capitalize;
-    transition: all 0.2s linear;
-    -moz-transition: all 0.2s linear;
-    -o-transition: all 0.2s linear;
+    transition: all .2s linear;
+    -moz-transition: all .2s linear;
+    -o-transition: all .2s linear;
     -webkit-box-sizing: border-box;
-    -webkit-transition: all 0.2s linear;
+    -webkit-transition: all .2s linear;
 }
 
 *::selection {
@@ -45,7 +45,7 @@ section {
 }
 
 ::-webkit-scrollbar {
-    width: 0.8rem;
+    width: .8rem;
 }
 
 ::-webkit-scrollbar-thumb {
@@ -79,9 +79,9 @@ section {
 
 .heading h2 span::before {
     background: var(--purple);
-    bottom: -0.5rem;
+    bottom: -.5rem;
     content: '';
-    height: 0.2rem;
+    height: .2rem;
     left: 0;
     margin-left: 10%;
     position: absolute;
@@ -94,7 +94,7 @@ section {
 
 .btn {
     background-color: transparent;
-    border: 0.2rem solid var(--purple);
+    border: .2rem solid var(--purple);
     color: var(--purple);
     display: inline-block;
     font-size: 1.8rem;
@@ -123,17 +123,17 @@ header {
     padding: 2rem 5%;
     position: fixed;
     top: 0;
-    transition: all 0.5s linear;
+    transition: all .5s linear;
     width: 100%;
     z-index: 999;
-    -moz-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
+    -moz-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
 }
 
 header.sticky {
-    background: rgba(0, 0, 0, 0.8);
-    border-bottom: 0.1rem solid var(--grey);
+    background: rgba(0, 0, 0, .8);
+    border-bottom: .1rem solid var(--grey);
 }
 
 header .logo h2 {
@@ -158,10 +158,10 @@ header #menu-btn {
     cursor: pointer;
     display: none;
     font-size: 3rem;
-    transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
-    -webkit-transition: all 0.5s linear;
+    transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -o-transition: all .5s linear;
+    -webkit-transition: all .5s linear;
 }
 
 header .fa-times {
@@ -265,7 +265,7 @@ header #menu-btn:hover {
 }
 
 .experience-item {
-    border-left: 0.2rem solid var(--purple);
+    border-left: .2rem solid var(--purple);
     flex: 1 1 40rem;
     margin-left: 2rem;
     padding: 0 3rem 2rem 3rem;
@@ -290,7 +290,7 @@ header #menu-btn:hover {
 
 .experience-item .content {
     border-left: 2rem;
-    border-radius: 0.5rem;
+    border-radius: .5rem;
     padding: 1rem 2rem;
 }
 
@@ -311,7 +311,7 @@ header #menu-btn:hover {
     border-radius: 50rem;
     color: var(--white);
     font-size: 1.8rem;
-    padding: 0.5rem 1.5rem;
+    padding: .5rem 1.5rem;
 }
 
 
@@ -334,16 +334,16 @@ header #menu-btn:hover {
 
 .service-item {
     background-color: var(--black);
-    border: 0.1rem solid rgba(255, 255, 255, 0.3);
-    border-radius: 0.5rem;
+    border: .1rem solid rgba(255, 255, 255, .3);
+    border-radius: .5rem;
     flex: 1 1 33rem;
     padding: 4rem 3rem;
     text-align: center;
-    transition: all 0.5s linear;
-    -moz-transition: all 0.5s linear;
-    -o-transition: all 0.5s linear;
+    transition: all .5s linear;
+    -moz-transition: all .5s linear;
+    -o-transition: all .5s linear;
     -webkit-box-flex: 1;
-    -webkit-transition: all 0.5s linear;
+    -webkit-transition: all .5s linear;
     -ms-flex: 1 1 33rem;
 }
 
@@ -392,7 +392,7 @@ header #menu-btn:hover {
 
 .controls .button {
     cursor: pointer;
-    margin: 0.5rem;
+    margin: .5rem;
 }
 
 .controls .button.active {
@@ -404,13 +404,13 @@ header #menu-btn:hover {
 .portfolio .box-container {
     display: -ms-grid;
     display: grid;
-    gap: 0.5rem;
+    gap: .5rem;
     grid-template-columns: repeat(auto-fit, minmax(33rem, 1fr));
     padding: 2rem 0;
 }
 
 .portfolio-item {
-    border-radius: 0.5rem;
+    border-radius: .5rem;
     height: 25rem;
     overflow: hidden;
     position: relative;
@@ -424,8 +424,8 @@ header #menu-btn:hover {
 
 .portfolio-item .content {
     align-items: center;
-    background-color: rgba(0, 0, 0, 0.8);
-    border-radius: 0.5rem;
+    background-color: rgba(0, 0, 0, .8);
+    border-radius: .5rem;
     content: '';
     display: -webkit-box;
     display: -ms-flexbox;
@@ -451,11 +451,11 @@ header #menu-btn:hover {
     padding-bottom: 1rem;
     transform: translateY(-10rem);
     transform-origin: top;
-    transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
+    transition: all .4s linear;
+    -moz-transition: all .4s linear;
+    -o-transition: all .4s linear;
     -webkit-transform: translateY(-10rem);
-    -webkit-transition: all 0.4s linear;
+    -webkit-transition: all .4s linear;
 }
 
 .portfolio-item .content p {
@@ -465,18 +465,18 @@ header #menu-btn:hover {
     opacity: 0;
     transform: translateY(-10rem);
     transform-origin: top;
-    transition: all 0.4s linear;
-    -moz-transition: all 0.4s linear;
-    -o-transition: all 0.4s linear;
+    transition: all .4s linear;
+    -moz-transition: all .4s linear;
+    -o-transition: all .4s linear;
     -webkit-transform: translateY(-10rem);
-    -webkit-transition: all 0.4s linear;
+    -webkit-transition: all .4s linear;
 }
 
 
 /*--------------------- 9 Contact ---------------------*/
 
 .contact .alert {
-    border-radius: 0.5rem;
+    border-radius: .5rem;
     color: var(--purple);
     font-size: 2rem;
     padding-left: 1rem;
@@ -511,7 +511,7 @@ header #menu-btn:hover {
 .contact-info>p {
     color: var(--grey);
     font-size: 1.6rem;
-    padding: 0.5rem 0;
+    padding: .5rem 0;
 }
 
 .contact-info .info-item {
@@ -544,7 +544,7 @@ header #menu-btn:hover {
     font-size: 1.5rem;
     height: 4rem;
     justify-content: center;
-    margin: 0 0.5rem;
+    margin: 0 .5rem;
     width: 4rem;
     -webkit-box-align: center;
     -webkit-box-pack: center;
@@ -573,10 +573,10 @@ header #menu-btn:hover {
 
 .contact-form .box {
     background-color: #222;
-    border: 0.1rem solid rgba(0, 0, 0, 0.1);
+    border: .1rem solid rgba(0, 0, 0, .1);
     color: var(--grey);
     font-size: 1.6rem;
-    margin: 0.5rem 0;
+    margin: .5rem 0;
     padding: 1.5rem;
     text-transform: none;
     width: 100%;
@@ -629,7 +629,7 @@ footer .social .fab {
     font-size: 2rem;
     height: 4rem;
     justify-content: center;
-    margin: 0 0.5rem;
+    margin: 0 .5rem;
     width: 4rem;
     -webkit-box-align: center;
     -webkit-box-pack: center;
@@ -658,7 +658,7 @@ footer .content p a {
 .scroll-top {
     align-items: center;
     background: var(--black);
-    border: 0.2rem solid var(--white);
+    border: .2rem solid var(--white);
     border-radius: 50%;
     bottom: 1rem;
     color: var(--white);
@@ -672,12 +672,12 @@ footer .content p a {
     justify-content: center;
     position: fixed;
     right: 1rem;
-    transition: all 0.2s;
+    transition: all .2s;
     width: 5rem;
     z-index: 999;
-    -moz-transition: all 0.2s;
-    -o-transition: all 0.2s;
-    -webkit-transition: all 0.2s;
+    -moz-transition: all .2s;
+    -o-transition: all .2s;
+    -webkit-transition: all .2s;
 }
 
 .scroll-top:hover {
