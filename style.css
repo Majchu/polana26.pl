@@ -12,6 +12,7 @@
     border: none;
     box-sizing: border-box;
     font-family: "Roboto", sans-serif;
+    font-display: swap;
     margin: 0;
     outline: none;
     padding: 0;
