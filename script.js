@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-/*--------------- Typing-Text ---------------*/
+// Typing text
 var TxtType = function(el, toRotate, period) {
     this.toRotate = toRotate;
     this.el = el;
