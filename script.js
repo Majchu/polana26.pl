@@ -22,14 +22,14 @@ $(document).ready(function() {
 
     /*--------------- Navbar Toggler ---------------*/
     $("#menu-btn").click(function() {
-        $(this).toggleClass("fa-times");
+        $(this).toggleClass("menu-times");
         $(".navbar").toggleClass("active");
     });
 
     /*--------------- Scroll-Top ---------------*/
     $(window).on("scroll", function() {
 
-        $("#menu-btn").removeClass("fa-times");
+        $("#menu-btn").removeClass("menu-times");
         $(".navbar").removeClass("active");
 
         // STICKY HEADER

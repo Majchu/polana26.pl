@@ -162,7 +162,6 @@ header .navbar a:hover {
 }
 
 header #menu-btn {
-    color: var(--white);
     cursor: pointer;
     display: none;
     font-size: 3rem;
@@ -172,15 +171,19 @@ header #menu-btn {
     -webkit-transition: all .5s linear;
 }
 
-header .fa-times {
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-}
-
 header #menu-btn:hover {
     color: var(--purple);
 }
 
+header .menu-times {
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+}
+
+header #menu-btn svg {
+    fill: var(--purple);
+    height: 3.3rem;
+}
 
 /*--------------------- 4 Home ---------------------*/
 
