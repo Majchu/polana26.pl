@@ -1,54 +1,54 @@
-var sections = $("section");
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
+  const navbarLinks = document.querySelectorAll(".navbar a");
+  const scrollTopBtn = document.querySelector(".scroll-top");
+  const menuBtn = document.getElementById("menu-btn");
+  const navbar = document.querySelector(".navbar");
+  const header = document.querySelector(".header");
 
-$(window).on("scroll", function() {
+  // Hide scroll-top button initially
+  scrollTopBtn.style.display = "none";
 
-    sections.each(function() {
+  // Scroll active section
+  window.addEventListener("scroll", function () {
+    const top = window.scrollY;
 
-        let top = $(window).scrollTop();
-        let offset = $(this).offset().top - 200;
-        let id = $(this).attr("id");
-        let height = $(this).height();
+    sections.forEach((section) => {
+      const offset = section.offsetTop - 200;
+      const height = section.offsetHeight;
+      const id = section.getAttribute("id");
 
-        if (top >= offset && top < offset + height) {
-            $(".navbar a").removeClass("active");
-            $(".navbar").find(`[href="#${id}"]`).addClass("active");
-        }
-    })
-});
-
-$(document).ready(function() {
-
-    $(".scroll-top").hide();
-
-    /*--------------- Navbar Toggler ---------------*/
-    $("#menu-btn").click(function() {
-        $(this).toggleClass("menu-times");
-        $(".navbar").toggleClass("active");
+      if (top >= offset && top < offset + height) {
+        navbarLinks.forEach((link) => link.classList.remove("active"));
+        const activeLink = document.querySelector(`.navbar a[href="#${id}"]`);
+        if (activeLink) activeLink.classList.add("active");
+      }
     });
 
-    /*--------------- Scroll-Top ---------------*/
-    $(window).on("scroll", function() {
+    // Sticky header
+    if (top > 0) {
+      header.classList.add("sticky");
+    } else {
+      header.classList.remove("sticky");
+    }
 
-        $("#menu-btn").removeClass("menu-times");
-        $(".navbar").removeClass("active");
+    // Scroll top button visibility
+    if (top > 100) {
+      scrollTopBtn.style.display = "block";
+    } else {
+      scrollTopBtn.style.display = "none";
+    }
 
-        // STICKY HEADER
-        if ($(window).scrollTop() > 0) {
-            $(".header").addClass("sticky");
-        } else {
-            $(".header").removeClass("sticky");
-        }
+    // Close menu on scroll
+    menuBtn.classList.remove("menu-times");
+    navbar.classList.remove("active");
+  });
 
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 100) {
-                $(".scroll-top").fadeIn();
-            } else {
-                $(".scroll-top").fadeOut();
-            }
-        });
-
-    });
-
+  // Menu toggle
+  menuBtn.addEventListener("click", () => {
+    menuBtn.classList.toggle("menu-times");
+    navbar.classList.toggle("active");
+  });
 });
 
 /*--------------- Typing-Text ---------------*/
